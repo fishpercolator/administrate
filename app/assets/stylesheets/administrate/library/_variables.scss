@@ -12,7 +12,7 @@ $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
-$modular-scale-ratio: $minor-third;
+$modular-scale-ratio: 1.2;
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
@@ -54,4 +54,4 @@ $base-border: 1px solid $base-border-color;
 
 // Transitions
 $base-duration: 250ms;
-$base-timing: $ease-out-cubic;
+$base-timing: cubic-bezier(0.215,  0.610, 0.355, 1.000);
