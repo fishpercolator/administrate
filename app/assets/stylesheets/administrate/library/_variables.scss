@@ -44,7 +44,7 @@ $base-background-color: $grey-0;
 $flash-colors: (
   alert: $light-yellow,
   error: $light-red,
-  notice: tint($blue, 50%),
+  notice: mix(#fff, $blue, 50%),
   success: $light-green
 );
 
