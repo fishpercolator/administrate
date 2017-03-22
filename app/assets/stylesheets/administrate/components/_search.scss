@@ -1,5 +1,6 @@
 .search {
-  @include padding(null $base-spacing);
+  padding-left: $base-spacing;
+  padding-right: $base-spacing;
   align-items: center;
   border-bottom: $base-border;
   display: flex;
@@ -12,7 +13,8 @@
 .search__clear,
 .search__icon {
   svg {
-    @include size(1em);
+    width: 1em;
+    height: 1em;
   }
 }
 
@@ -55,14 +57,17 @@
 }
 
 .search__hint {
-  @include position(absolute, 1em 0 null null);
+  position: absolute;
+  top: 1em;
+  left: 0;
   color: $hint-grey;
   opacity: 0;
   transition: opacity $base-duration $base-timing;
   z-index: 1;
 
   svg {
-    @include size(100%);
+    width: 100%;
+    height: 100%;
   }
 
   path,
