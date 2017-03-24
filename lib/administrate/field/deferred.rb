@@ -12,7 +12,7 @@ module Administrate
 
       def new(*args)
         # If the args already end with a "keyword hash", merge it with options
-        new_options = args.last.respond_to(:pop) ? args.pop : {}
+        new_options = args.last.respond_to?(:pop) ? args.pop : {}
         deferred_class.new(*args, options.merge(new_options))
       end
 
