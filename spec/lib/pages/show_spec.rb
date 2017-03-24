@@ -12,10 +12,11 @@ describe Administrate::Page::Show do
   
   describe '#attributes' do
     it 'passes the resource to the field object' do
-      customer = double(name: "Worf")
+      customer = double(name: "Worf").as_null_object
       page = Administrate::Page::Show.new(CustomerDashboard.new, customer)
       
       expect(page.attributes.first.resource).to eq(customer)
+      expect(page.attributes.first.resource.name).to eq('Worf')
     end
   end
   
