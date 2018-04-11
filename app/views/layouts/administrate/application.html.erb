@@ -21,21 +21,21 @@ By default, it renders:
   <title>
     <%= content_for(:title) %> - <%= Rails.application.class.parent_name.titlecase %>
   </title>
-  <%= render "stylesheet" %>
+  <%= render "administrate/application/stylesheet" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render "icons" %>
+  <%= render "administrate/application/icons" %>
 
   <div class="app-container">
-    <%= render "navigation" -%>
+    <%= render "administrate/application/navigation" -%>
 
     <main class="main-content" role="main">
-      <%= render "flashes" -%>
+      <%= render "administrate/application/flashes" -%>
       <%= yield %>
     </main>
   </div>
 
-  <%= render "javascript" %>
+  <%= render "administrate/application/javascript" %>
 </body>
 </html>
