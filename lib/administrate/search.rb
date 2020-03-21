@@ -140,13 +140,7 @@ module Administrate
     end
 
     def association_search?(attribute)
-      return unless attribute_types[attribute].respond_to?(:deferred_class)
-
-      [
-        Administrate::Field::BelongsTo,
-        Administrate::Field::HasMany,
-        Administrate::Field::HasOne,
-      ].include?(attribute_types[attribute].deferred_class)
+      attribute_types[attribute].associative?
     end
 
     def term
